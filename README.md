@@ -36,6 +36,9 @@ This project converts Notion pages to Logseq journal format to enable migrating 
   - This will create a `output2logseq` folder where files will be extracted and processed.
 - Then copy/move the 'pages' and 'assets' folders into your logseq graph root folder
 
+# Do you like it? 
+- https://www.patreon.com/mijak/shop/show-your-appreciation-100543
+
 # Disclaimer
 - Use at your own risk. I am not responsible for any damages to your data.
 
