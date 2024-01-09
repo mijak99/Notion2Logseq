@@ -9,8 +9,21 @@ This project converts Notion pages to Logseq journal format to enable migrating 
 # Requirements
 
 - If your notion zip contains long filenames, you may need to use long paths enabled on Windows.
-  - https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/The-Windows-10-default-path-length-limitation-MAX-PATH-is-256-characters.html
   - This is a windows limitation. 
+  - To fix (at your own risk, if you don't know what you are doing) :
+    - Start Regedit 
+    - In HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem...
+    - Select the entry named: LongPathsEnabled    (DWORD (32-bit) if you have to create it)
+    - Set the value to 1
+    - Restart windows, or (if you are lucky) just the relevant processes
+
+
+## How to use
+
+- Export from notion. To keep assets and filenames unique, use subdirectories for pages when exporting
+- Run `python main.py path/to/your/notion-export.zip`
+  - This will create a `output2logseq` folder where files will be extracted and processed.
+- Then copy/move the 'pages' and 'assets' folders into your logseq graph root folder
 
 
 ## Features
@@ -27,14 +40,6 @@ This project converts Notion pages to Logseq journal format to enable migrating 
 - Also creates a page containing a summary, called **Notion Export <YYYYMMDD HHMMSS>**
   - Includes warning for links to notion pages that where not included in the export
 
-
-
-## How to use
-
-- Export from notion. To keep assets and filenames unique, use subdirectories for pages when exporting
-- Run `python main.py path/to/your/notion-export.zip`
-  - This will create a `output2logseq` folder where files will be extracted and processed.
-- Then copy/move the 'pages' and 'assets' folders into your logseq graph root folder
 
 # Do you like it? 
 - https://www.patreon.com/mijak/shop/show-your-appreciation-100543
