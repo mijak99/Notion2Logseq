@@ -7,10 +7,9 @@ import os
 import re
 import zipfile
 import argparse
-import json
 
-from FileDictionary import *
-from NotionUtils import *
+from notion2logseq.FileDictionary import *
+from notion2logseq.NotionUtils import *
 from Logger import *
 
 
